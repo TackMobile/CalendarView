@@ -6,4 +6,6 @@
     <color name="text_color">#31D1F1</color>
 	<color name="white">#ffffff</color>
 	<string name="open">Open</string>
+	<string name="previous">Previous Month</string>
+	<string name="next">Next Month</string>
 </resources>
