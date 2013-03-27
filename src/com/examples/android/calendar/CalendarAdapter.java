@@ -36,22 +36,24 @@ public class CalendarAdapter extends BaseAdapter {
 
   private Context mContext;
 
-  private java.util.Calendar month;
+  private Calendar month;
   private Calendar selectedDate;
   private Calendar todayDate;
+  private Calendar week;
   private ArrayList<String> items;
   private TextView monthTitle;
 
   public CalendarAdapter(Context c, Calendar monthCalendar) {
     month = monthCalendar;
+    week = monthCalendar;
     selectedDate = (Calendar)monthCalendar.clone();
     selectedDate.set(0, 0, 0);
     todayDate = Calendar.getInstance();
     mContext = c;
     month.set(Calendar.DAY_OF_MONTH, 1);
+    week.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
     this.items = new ArrayList<String>();
     monthTitle = (TextView) ((Activity) mContext).findViewById(R.id.title);
-    refreshDays();
   }
 
   public void setItems(ArrayList<String> items) {
@@ -186,6 +188,22 @@ public class CalendarAdapter extends BaseAdapter {
       tempDay[i] = ""; 
     }
     days = tempDay;
+  }
+  
+  public void refreshDaysForWeek() {
+    // clear items
+    items.clear();
+
+    monthTitle.setText("Week of " + android.text.format.DateFormat.format("MMMM d, yyyy", week));
+    days = new String[7];
+    
+    Calendar tempCalendar = (Calendar)week.clone();
+    for (int i = 0; i < 7; i++) {
+      days[i]= String.valueOf(tempCalendar.get(Calendar.DAY_OF_MONTH));
+      tempCalendar.add(Calendar.DATE, 1);
+    }
+    // populate days
+    
   }
 
   // references to our items
