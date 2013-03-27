@@ -3,31 +3,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/calendar_item_background"
-    android:padding="4dp" >
+    android:padding="2dp" >
 
     <RelativeLayout
-       	android:id="@+id/item_content_container"
+        android:id="@+id/item_content_container"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@null" >
 
-        <TextView
+        <com.pearsoned.ecollege.openclass.view.TextViewLight
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textColor="#455265"
-            android:textSize="22sp" >
-        </TextView>
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:shadowColor="@color/white"
+            android:shadowDy="2.0"
+            android:shadowRadius="1.0"
+            android:textColor="#525252"
+            android:textSize="24sp" />
 
         <ImageView
             android:id="@+id/date_marker"
-            android:layout_width="6dp"
-            android:layout_height="6dp"
-            android:layout_below="@+id/date"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="2dp"
+            android:layout_below="@+id/date"
+            android:contentDescription="Event"
             android:src="@drawable/calendar_day"
+            android:scaleType="centerInside"
             android:visibility="visible" />
     </RelativeLayout>
 

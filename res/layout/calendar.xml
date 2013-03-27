@@ -8,12 +8,14 @@
         android:id="@+id/header"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp" >
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
             android:gravity="left" >
 
             <ImageView
@@ -28,7 +30,7 @@
                 android:src="@drawable/calendar_arrow_left" />
         </LinearLayout>
 
-        <TextView
+        <com.pearsoned.ecollege.openclass.view.TextViewLight
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,12 +39,17 @@
             android:gravity="center_horizontal"
             android:padding="5dp"
             android:paddingLeft="5dp"
-            android:textSize="22sp" />
+            android:shadowColor="@color/white"
+            android:shadowDy="2.0"
+            android:shadowRadius="1.0"
+            android:textColor="#AAAAAA"
+            android:textSize="24sp" />
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
             android:layout_toRightOf="@+id/title"
             android:gravity="right" >
 
@@ -64,7 +71,9 @@
         android:layout_height="fill_parent"
         android:background="@drawable/calendar_grid_background"
         android:gravity="center"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:paddingBottom="1dp"
+        android:paddingTop="1dp" >
 
         <GridView
             android:id="@+id/header_gridview"
@@ -72,8 +81,6 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:numColumns="7"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
             android:stretchMode="columnWidth" />
 
         <GridView
@@ -81,9 +88,9 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:gravity="center"
+            android:listSelector="@drawable/calendar_item_container"
             android:numColumns="7"
-            android:stretchMode="columnWidth"
-            android:listSelector="@drawable/calendar_item_container" />
+            android:stretchMode="columnWidth" />
     </LinearLayout>
 
 </LinearLayout>

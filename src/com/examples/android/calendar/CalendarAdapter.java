@@ -19,14 +19,12 @@ package com.examples.android.calendar;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-
-
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -85,14 +83,16 @@ public class CalendarAdapter extends BaseAdapter {
     if (convertView == null) {  // if it's not recycled, initialize some attributes
       LayoutInflater vi = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
       v = vi.inflate(R.layout.calendar_item, null);
-
     }
+
     dayView = (TextView)v.findViewById(R.id.date);
+    dayView.setTextColor(Color.parseColor("#AAAAAA"));
     RelativeLayout container = (RelativeLayout)v.findViewById(R.id.item_content_container);
     // disable empty days from the beginning
     if(days[position].equals("")) {
       dayView.setClickable(false);
       dayView.setFocusable(false);
+      container.setBackgroundResource(android.R.color.transparent);
     }
     else {
       // mark current day as focused
@@ -105,6 +105,7 @@ public class CalendarAdapter extends BaseAdapter {
       //today is persistent color
       if(month.get(Calendar.YEAR)== todayDate.get(Calendar.YEAR) && month.get(Calendar.MONTH)== todayDate.get(Calendar.MONTH) && days[position].equals(""+todayDate.get(Calendar.DAY_OF_MONTH))) {
         container.setBackgroundResource(R.drawable.calendar_item_today_background);
+        dayView.setTextColor(Color.parseColor("#70B700"));
       }
     }
     dayView.setText(days[position]);
@@ -174,6 +175,17 @@ public class CalendarAdapter extends BaseAdapter {
       days[i] = ""+dayNumber;
       dayNumber++;
     }
+    
+    //add in buffer days at the end to complete grid
+    int numberOfItemsToCompleteGrid = 7 * (int)Math.ceil(days.length / 7.0);
+    String[] tempDay = new String[numberOfItemsToCompleteGrid];
+    for(int i = 0; i<days.length; i++) {
+      tempDay[i] = days[i]; 
+    }
+    for(int i = days.length; i<numberOfItemsToCompleteGrid;i++ ) {
+      tempDay[i] = ""; 
+    }
+    days = tempDay;
   }
 
   // references to our items

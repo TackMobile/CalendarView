@@ -8,11 +8,12 @@ int drawable calendar_item_background 0x7f020004
 int drawable calendar_item_container 0x7f020005
 int drawable calendar_item_focused_background 0x7f020006
 int drawable calendar_item_today_background 0x7f020007
-int drawable header_background 0x7f020008
-int drawable icon 0x7f020009
-int drawable item_background 0x7f02000a
-int drawable item_background_focused 0x7f02000b
-int drawable list_item_background 0x7f02000c
+int drawable calendar_weekday_background 0x7f020008
+int drawable header_background 0x7f020009
+int drawable icon 0x7f02000a
+int drawable item_background 0x7f02000b
+int drawable item_background_focused 0x7f02000c
+int drawable list_item_background 0x7f02000d
 int id calendar_weekday_title 0x7f060009
 int id date 0x7f060007
 int id datePicker1 0x7f06000a

@@ -23,11 +23,12 @@ public final class R {
         public static int calendar_item_container=0x7f020005;
         public static int calendar_item_focused_background=0x7f020006;
         public static int calendar_item_today_background=0x7f020007;
-        public static int header_background=0x7f020008;
-        public static int icon=0x7f020009;
-        public static int item_background=0x7f02000a;
-        public static int item_background_focused=0x7f02000b;
-        public static int list_item_background=0x7f02000c;
+        public static int calendar_weekday_background=0x7f020008;
+        public static int header_background=0x7f020009;
+        public static int icon=0x7f02000a;
+        public static int item_background=0x7f02000b;
+        public static int item_background_focused=0x7f02000c;
+        public static int list_item_background=0x7f02000d;
     }
     public static final class id {
         public static int calendar_weekday_title=0x7f060009;
