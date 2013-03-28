@@ -43,9 +43,9 @@ public class CalendarAdapter extends BaseAdapter {
   private ArrayList<String> items;
   private TextView monthTitle;
 
-  public CalendarAdapter(Context c, Calendar monthCalendar) {
+  public CalendarAdapter(Context c, Calendar monthCalendar, Calendar weekCalendar, TextView monthTitle) {
     month = monthCalendar;
-    week = monthCalendar;
+    week = weekCalendar;
     selectedDate = (Calendar)monthCalendar.clone();
     selectedDate.set(0, 0, 0);
     todayDate = Calendar.getInstance();
@@ -53,7 +53,7 @@ public class CalendarAdapter extends BaseAdapter {
     month.set(Calendar.DAY_OF_MONTH, 1);
     week.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
     this.items = new ArrayList<String>();
-    monthTitle = (TextView) ((Activity) mContext).findViewById(R.id.title);
+    this.monthTitle = monthTitle;
   }
 
   public void setItems(ArrayList<String> items) {
@@ -63,6 +63,8 @@ public class CalendarAdapter extends BaseAdapter {
       }
     }
     this.items = items;
+    notifyDataSetInvalidated();
+    notifyDataSetChanged();
   }
 
 

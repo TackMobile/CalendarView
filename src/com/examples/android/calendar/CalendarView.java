@@ -46,17 +46,17 @@ public class CalendarView extends Activity {
 	    month = Calendar.getInstance();
 	    onNewIntent(getIntent());
 	    
+	    TextView title  = (TextView) findViewById(R.id.title);
+        title.setText(android.text.format.DateFormat.format("MMMM yyyy", month));
+	    
 	    items = new ArrayList<String>();
-	    adapter = new CalendarAdapter(this, month);
+	    adapter = new CalendarAdapter(this, month, month, title);
 	    
 	    GridView gridview = (GridView) findViewById(R.id.gridview);
 	    gridview.setAdapter(adapter);
 	    
 	    handler = new Handler();
 	    handler.post(calendarUpdater);
-	    
-	    TextView title  = (TextView) findViewById(R.id.title);
-	    title.setText(android.text.format.DateFormat.format("MMMM yyyy", month));
 	    
 	    TextView previous  = (TextView) findViewById(R.id.previous);
 	    previous.setOnClickListener(new OnClickListener() {
