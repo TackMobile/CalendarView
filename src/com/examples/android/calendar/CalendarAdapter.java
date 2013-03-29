@@ -19,7 +19,6 @@ package com.examples.android.calendar;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.view.LayoutInflater;

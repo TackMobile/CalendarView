@@ -29,7 +29,7 @@
             android:layout_height="5dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/date"
-            android:contentDescription="Event"
+            android:contentDescription="@string/event"
             android:src="@drawable/calendar_day"
             android:scaleType="centerInside"
             android:visibility="visible" />
