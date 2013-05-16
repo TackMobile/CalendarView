@@ -15,31 +15,47 @@ public final class R {
         public static int white=0x7f050001;
     }
     public static final class drawable {
-        public static int header_background=0x7f020000;
-        public static int icon=0x7f020001;
-        public static int item_background=0x7f020002;
-        public static int item_background_focused=0x7f020003;
-        public static int list_item_background=0x7f020004;
+        public static int calendar_arrow_left=0x7f020000;
+        public static int calendar_arrow_right=0x7f020001;
+        public static int calendar_day=0x7f020002;
+        public static int calendar_grid_background=0x7f020003;
+        public static int calendar_item_background=0x7f020004;
+        public static int calendar_item_container=0x7f020005;
+        public static int calendar_item_focused_background=0x7f020006;
+        public static int calendar_item_today_background=0x7f020007;
+        public static int calendar_weekday_background=0x7f020008;
+        public static int header_background=0x7f020009;
+        public static int icon=0x7f02000a;
+        public static int item_background=0x7f02000b;
+        public static int item_background_focused=0x7f02000c;
+        public static int list_item_background=0x7f02000d;
     }
     public static final class id {
-        public static int date=0x7f060005;
-        public static int datePicker1=0x7f060007;
-        public static int date_icon=0x7f060006;
-        public static int gridview=0x7f060004;
+        public static int calendar_weekday_title=0x7f060009;
+        public static int date=0x7f060007;
+        public static int datePicker1=0x7f06000a;
+        public static int date_marker=0x7f060008;
+        public static int gridview=0x7f060005;
         public static int header=0x7f060000;
+        public static int header_gridview=0x7f060004;
+        public static int item_content_container=0x7f060006;
         public static int next=0x7f060003;
-        public static int openButton=0x7f060008;
+        public static int openButton=0x7f06000b;
         public static int previous=0x7f060001;
         public static int title=0x7f060002;
     }
     public static final class layout {
         public static int calendar=0x7f030000;
         public static int calendar_item=0x7f030001;
-        public static int main=0x7f030002;
+        public static int calendar_weekday_item=0x7f030002;
+        public static int main=0x7f030003;
     }
     public static final class string {
         public static int app_name=0x7f040001;
+        public static int event=0x7f040005;
         public static int hello=0x7f040000;
+        public static int next=0x7f040004;
         public static int open=0x7f040002;
+        public static int previous=0x7f040003;
     }
 }

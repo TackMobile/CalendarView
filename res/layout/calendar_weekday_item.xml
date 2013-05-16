@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:background="@drawable/calendar_weekday_background" >
+
+    <TextView
+        android:id="@+id/calendar_weekday_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:shadowColor="@color/white"
+        android:shadowDy="2.0"
+        android:shadowRadius="1.0"
+        android:textColor="#525252"
+        android:textStyle="bold"
+        android:textSize="12sp" />
+
+</RelativeLayout>

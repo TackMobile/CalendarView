@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- Bottom White -->
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+
+    <!-- Bottom Grey -->
+    <item android:bottom="1dp">
+        <shape android:shape="rectangle" >
+            <solid android:color="#CCE7E7E7" />
+        </shape>
+    </item>
+
+    <!-- Color of cell -->
+    <item
+        android:bottom="2dp"
+        android:top="1dp"
+        android:right="1dp">
+        <shape android:shape="rectangle" >
+            <solid android:color="#F6F6F6" />
+        </shape>
+    </item>
+
+</layer-list>

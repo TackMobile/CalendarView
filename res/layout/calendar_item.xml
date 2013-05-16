@@ -1,26 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="60px"
-    android:padding="8dp"
-    android:orientation="vertical"
-    
-    android:background="@drawable/list_item_background"    
-    >
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-			android:id="@+id/date"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    
-		    android:textSize="14sp"
-		    android:textStyle="bold"
-		    android:textColor="@color/text_color"
-		    >
-</TextView>
-<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-		android:id="@+id/date_icon"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-		android:src="@drawable/icon" 
-		android:visibility="invisible"/>
-</LinearLayout>
+    android:layout_height="match_parent"
+    android:background="@drawable/calendar_item_background"
+    android:padding="2dp" >
+
+    <RelativeLayout
+        android:id="@+id/item_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@null" >
+
+        <com.pearsoned.ecollege.openclass.view.TextViewLight
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:shadowColor="@color/white"
+            android:shadowDy="2.0"
+            android:shadowRadius="1.0"
+            android:textColor="#525252"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/date_marker"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/date"
+            android:contentDescription="@string/event"
+            android:src="@drawable/calendar_day"
+            android:scaleType="centerInside"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>
